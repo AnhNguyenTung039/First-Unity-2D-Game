@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class LearningHowToProgram : MonoBehaviour
 {
-    private void Start()
+    Player hero;
+    public void Start()
     {
-        StartCoroutine(ExecuteSomthing());
+        hero = new(100, 50, "Hero");
+        hero.Info();
+        hero.Attack();
     }
-    
-    IEnumerator ExecuteSomthing ()
-    {
-        yield return new WaitForSeconds(2f);
 
-        Debug.Log("Something Cool");
-    }
 }
